@@ -39,7 +39,6 @@ export const registerUser = asyncHandler(async (req, res) => {
 
   await newUser.save();
 
-  await generateCookie(res, newUser._id);
   res.status(200).json({
     message: "User registered successfully!",
     user: {
@@ -55,7 +54,7 @@ export const registerUser = asyncHandler(async (req, res) => {
 export const loginUser = asyncHandler(async (req, res) => {
   const { email, password } = req.body;
 
-  const existingUser = await User.findOne({ email });
+  const existingUser = await User.findOne({ email }).select("+password");
 
   if (!existingUser) {
     return res.status(404).json({
@@ -173,7 +172,7 @@ export const updateCurrentUserProfile = asyncHandler(async (req, res) => {
 
 // Controller function to update the current user's password
 export const resetPassword = asyncHandler(async (req, res) => {
-  const user = await User.findById(req.user._id);
+  const user = await User.findById(req.user._id).select("+password");
 
   if (!user) {
     return res.status(404).json({ error: "User not found!" });

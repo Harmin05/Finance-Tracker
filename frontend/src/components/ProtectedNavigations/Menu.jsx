@@ -15,7 +15,6 @@ import {
   Dashboard,
   Income,
   Expense,
-  Settings,
   ShutDown as Logout,
 } from "../../utils/Icons";
 import { openModal } from "../../features/logoutModal/logoutModalSlice";
@@ -71,15 +70,6 @@ const Menu = () => {
           Expenses
         </DropdownItem>
 
-        <DropdownItem
-          key="settingss"
-          color="secondary"
-          startContent={<Settings />}
-          description="View account Settings."
-          onPress={() => navigate("/dashboard/settings")}
-        >
-          Settings
-        </DropdownItem>
 
         <DropdownItem
           key="logout"

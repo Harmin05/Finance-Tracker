@@ -6,7 +6,7 @@ import {
   Dashboard,
   Income,
   Expense,
-  Settings,
+  UpdateProfile,
   ShutDown as Logout,
 } from "../../utils/Icons";
 import { openModal } from "../../features/logoutModal/logoutModalSlice";
@@ -68,14 +68,14 @@ const SideBar = () => {
         </div>
         <li
           className={`link mt-auto ${
-            isRouteActive("/dashboard/settings") ? "activeLink" : ""
+            isRouteActive("/dashboard/update-profile") ? "activeLink" : ""
           }`}
           onClick={() => {
-            navigate("/dashboard/settings");
+            navigate("/dashboard/update-profile");
           }}
         >
-          <Settings className="size-[1.5rem]" />
-          Settings
+          <UpdateProfile className="size-[1.5rem]" />
+          Update Profile
         </li>
         <li
           className="link mt-6 hover:bg-error hover:text-white"

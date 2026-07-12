@@ -1,8 +1,8 @@
 {
   "name": "finance-tracker",
   "version": "1.0.0",
-  "description": "Finance Tracker monorepo - run backend and frontend together.",
-  "author": "Priyanshu Patra",
+  "description": "Finance Tracker",
+  "author": "Harmin Patel",
   "license": "MIT",
   "scripts": {
     "dev:backend": "cd backend && npm run dev",

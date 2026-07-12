@@ -8,4 +8,5 @@ export { default as Dashboard } from "./ProtectedPages/Dashboard";
 export { default as MainDashboard } from "./ProtectedPages/MainDashboard";
 export { default as Incomes } from "./ProtectedPages/Incomes";
 export { default as Expenses } from "./ProtectedPages/Expenses";
-export { default as Settings } from "./ProtectedPages/Settings";
+export { default as UpdateProfile } from "./ProtectedPages/UpdateProfile";
+export { default as Profile } from "./ProtectedPages/Profile";

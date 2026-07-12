@@ -13,7 +13,8 @@ import {
   MainDashboard,
   Incomes,
   Expenses,
-  Settings,
+  UpdateProfile,
+  Profile,
 } from "./pages";
 import { PublicRoutes, ProtectedRoutes } from "./components/Guards";
 
@@ -40,7 +41,8 @@ const App = () => {
             <Route path="/dashboard" element={<MainDashboard />} />
             <Route path="/dashboard/incomes" element={<Incomes />} />
             <Route path="/dashboard/expenses" element={<Expenses />} />
-            <Route path="/dashboard/settings" element={<Settings />} />
+            <Route path="/dashboard/update-profile" element={<UpdateProfile />} />
+            <Route path="/dashboard/profile" element={<Profile />} />
           </Route>
         </Route>
 

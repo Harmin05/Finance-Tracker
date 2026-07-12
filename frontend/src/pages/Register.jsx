@@ -52,12 +52,11 @@ const Register = () => {
 
       dispatch(updateLoader(40));
       const res = await register(formData).unwrap();
-      await dispatch(setCredentials(res.user));
 
       dispatch(updateLoader(60));
       toast.success(res.message || "User registered successfully!");
 
-      navigate("/dashboard");
+      navigate("/login");
     } catch (error) {
       console.log(error);
       toast.error(error?.data?.error || "Unexpected Internal Server Error!");

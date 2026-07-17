@@ -32,17 +32,19 @@ const App = () => {
       />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/" element={<PublicRoutes />}>
+        
+        <Route element={<PublicRoutes />}>
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
         </Route>
-        <Route path="/" element={<ProtectedRoutes />}>
+        
+        <Route element={<ProtectedRoutes />}>
           <Route path="/dashboard" element={<Dashboard />}>
-            <Route path="/dashboard" element={<MainDashboard />} />
-            <Route path="/dashboard/incomes" element={<Incomes />} />
-            <Route path="/dashboard/expenses" element={<Expenses />} />
-            <Route path="/dashboard/update-profile" element={<UpdateProfile />} />
-            <Route path="/dashboard/profile" element={<Profile />} />
+            <Route index element={<MainDashboard />} />
+            <Route path="incomes" element={<Incomes />} />
+            <Route path="expenses" element={<Expenses />} />
+            <Route path="update-profile" element={<UpdateProfile />} />
+            <Route path="profile" element={<Profile />} />
           </Route>
         </Route>
 

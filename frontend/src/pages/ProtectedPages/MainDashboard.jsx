@@ -101,7 +101,7 @@ const DashboardPage = () => {
           <div>
             <h4 className="font-outfit text-base md:text-lg">Total Balance</h4>
             <h4 className="text-2xl md:text-3xl mt-1">
-              $
+              ₹
               <NumericFormat
                 className="ml-1 text-xl md:text-2xl"
                 value={totalBalance}
@@ -116,7 +116,7 @@ const DashboardPage = () => {
           <div>
             <h4 className="font-outfit text-base md:text-lg">Total Incomes</h4>
             <h4 className="text-2xl md:text-3xl text-emerald-400 mt-1">
-              $
+              ₹
               <NumericFormat
                 className="ml-1 text-xl md:text-2xl"
                 value={totalIncome}
@@ -131,7 +131,7 @@ const DashboardPage = () => {
           <div>
             <h4 className="font-outfit text-base md:text-lg">Total Expenses</h4>
             <h4 className="text-2xl md:text-3xl text-red-400 mt-1">
-              $
+              ₹
               <NumericFormat
                 className="ml-1 text-xl md:text-2xl"
                 value={totalExpense}
@@ -185,7 +185,7 @@ const DashboardPage = () => {
                         : "text-red-400"
                     }`}
                   >
-                    ${transaction.amount}
+                    ₹{transaction.amount}
                   </h5>
                 </li>
               ))
